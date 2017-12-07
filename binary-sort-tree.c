@@ -251,6 +251,8 @@ int main()
     }
 #endif
 
+
+#if 0
     pBinOrderTree = DeleteNode(pBinOrderTree, 66);
     printf("DeleteNode ret:%10p\n", pBinOrderTree);
     if (pBinOrderTree)
@@ -260,6 +262,14 @@ int main()
 
     pBinOrderTree = DeleteNode(pBinOrderTree, 166);
     printf("DeleteNode ret:%10p\n", pBinOrderTree);
+#endif
+
+    //删除全部节点测试
+    for (int nIndex = 0; nIndex < sizeof(acData)/sizeof(int); nIndex++)
+    {
+        pBinOrderTree = DeleteNode(pBinOrderTree, acData[nIndex]);
+        printf("DeleteNode ret:%10p\n", pBinOrderTree);
+    }
 
     return 0;
 }
